@@ -3,6 +3,6 @@
   "sourceRoot": "src",
   "compilerOptions": {
     "webpack": true,
-    "webpackConfigPath": "webpack.config.ts"
+    "webpackConfigPath": "webpack.config.js"
   }
 }

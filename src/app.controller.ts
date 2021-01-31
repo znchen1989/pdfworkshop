@@ -2,6 +2,7 @@ import { Controller, Get, Render, Res } from '@nestjs/common';
 import * as puppeteer from 'puppeteer';
 import { Response } from 'express';
 import { Readable } from 'stream';
+import styles from './less/index.less';
 import { AppService } from './app.service';
 
 @Controller()
@@ -10,8 +11,8 @@ export class AppController {
 
   @Get()
   @Render('index')
-  getHello() {
-    return { message: this.appService.getHello() };
+  index() {
+    return { message: this.appService.getHello(), styles: styles.toString() };
   }
 
   @Get('downloadPdf')
