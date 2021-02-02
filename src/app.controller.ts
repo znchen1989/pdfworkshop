@@ -12,6 +12,7 @@ export class AppController {
   @Get()
   @Render('index')
   index() {
+    console.log('------proces.env.PD_ENV', process.env.PD_ENV);
     return { message: this.appService.getHello(), styles: styles.toString() };
   }
 
